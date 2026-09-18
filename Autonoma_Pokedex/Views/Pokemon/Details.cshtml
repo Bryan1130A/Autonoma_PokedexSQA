@@ -1,0 +1,80 @@
+﻿@model Autonoma_Pokedex.Models.Pokemon
+
+@{
+    ViewData["Title"] = "Detalle del Pokémon";
+}
+
+<div class="container mt-5">
+
+    <div class="text-center mb-4">
+        <h1 class="fw-bold text-capitalize">
+            @Model.Name
+        </h1>
+    </div>
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-5 text-center">
+
+            <img src="@Model.Image"
+                 alt="@Model.Name"
+                 class="img-fluid"
+                 style="height: 300px; object-fit: contain;">
+
+        </div>
+
+        <div class="col-md-5">
+
+            <div class="card shadow-sm">
+
+                <div class="card-body">
+
+                    <h4 class="card-title mb-4">
+                        Información
+                    </h4>
+
+                    <p>
+                        <strong>ID:</strong>
+                        @Model.Id
+                    </p>
+
+                    <p class="text-capitalize">
+                        <strong>Nombre:</strong>
+                        @Model.Name
+                    </p>
+
+                    <p>
+                        <strong>Altura:</strong>
+                        @Model.Height
+                    </p>
+
+                    <p>
+                        <strong>Peso:</strong>
+                        @Model.Weight
+                    </p>
+
+                    <p class="text-capitalize">
+                        <strong>Tipo:</strong>
+                        @Model.Type
+                    </p>
+
+                    <p class="text-capitalize">
+                        <strong>Habilidad:</strong>
+                        @Model.Ability
+                    </p>
+
+                    <a asp-controller="Pokemon"
+                       asp-action="Index"
+                       class="btn btn-primary mt-3">
+                        Volver a la Pokédex
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
